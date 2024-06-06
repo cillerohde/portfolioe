@@ -1,0 +1,79 @@
+body {
+  background-color: #fdfdda37;
+}
+
+.video {
+  position: relative; /* Gør det muligt at absolut positionere tekst indenfor containeren */
+  top: -90px;
+  width: 100%; /* Ændret til procentdel af skærmens bredde */
+  height: 100vh; /* Ændret til viewport height (vh) for at matche skærmens højde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+header {
+  position: relative; /* Gør det muligt at absolut positionere headeren */
+  z-index: 10; /* Sørger for, at headeren altid er øverst */
+}
+
+.overlay-text {
+  display: inline-block;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.videotekst {
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 10px;
+  border-right: 5px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(14, end), cursor 0.8s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .video {
+    top: 0;
+    width: 100%;
+    height: 100vw; /* Tilpas højden til at være lig med skærmens bredde */
+    align-items: center;
+    transform: rotate(90deg); /* Roter videoen til lodret position */
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%; /* Centrer teksten lodret */
+    left: 50%; /* Centrer teksten vandret */
+    transform: translate(-50%, -50%) rotate(-90deg); /* Roter teksten og centrer den */
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 10px;
+    text-align: center; /* Centrer teksten vandret */
+  }
+
+  .videotekst {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+  }
+}

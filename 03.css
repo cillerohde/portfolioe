@@ -1,0 +1,103 @@
+.del1 {
+  text-align: center;
+  position: relative; /* Gør det muligt at absolut positionere h1 */
+}
+
+h1 {
+  font-size: 100px;
+}
+
+.del1 h1 {
+  font-size: 100px;
+  position: absolute;
+  top: -300%; /* Placerer overskriften 50% ned i containeren */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrerer overskriften */
+  padding: 40px; /* Tilføjer lidt indrykning omkring teksten */
+}
+
+.del1 h2 {
+  font-size: 30px;
+  font-style: normal;
+}
+
+.del2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  line-height: 1.8;
+  padding: 30px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+  padding: 30px;
+  margin: 40px;
+}
+
+.knap-container {
+  padding-left: 200px;
+}
+
+.moodboard {
+  padding-left: 50px;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 50px; /* Mindre skriftstørrelse for mobilvisning */
+  }
+
+  .del1 h1 {
+    font-size: 50px; /* Mindre skriftstørrelse for mobilvisning */
+    position: static; /* Fjern absolut positionering */
+    top: 0;
+    left: 0;
+    transform: none; /* Fjern transformering */
+    padding: 20px; /* Mindre padding for mobilvisning */
+    margin-bottom: 20px; /* Tilføj margin for afstand */
+  }
+
+  .del1 h2 {
+    font-size: 24px; /* Mindre skriftstørrelse for mobilvisning */
+  }
+
+  .del2 {
+    display: block; /* Skift til blokvisning for mobilvisning */
+    padding: 10px; /* Mindre padding for mobilvisning */
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner */
+    grid-template-rows: 1fr 1fr; /* To rækker */
+    grid-gap: 10px; /* Mindre mellemrum mellem billeder */
+    width: 100%; /* Fyld bredde */
+    margin: 0 auto; /* Centrer grid */
+  }
+
+  .grid-item {
+    padding: 5px; /* Mindre padding for mobilvisning */
+    margin: 0; /* Fjern margin for mobilvisning */
+  }
+
+  .grid-item img {
+    width: 100%; /* Gør billederne 100% af grid-item */
+    height: auto; /* Bevar billedets aspektforhold */
+  }
+
+  .knap-container {
+    padding-left: 0; /* Fjern padding for mobilvisning */
+    text-align: center; /* Centrer knappen */
+    margin: 20px 0; /* Tilføj margin for mobilvisning */
+  }
+
+  .moodboard {
+    padding-left: 0; /* Fjern padding for mobilvisning */
+    text-align: center; /* Centrer indholdet */
+    margin: 20px 0; /* Tilføj margin for mobilvisning */
+  }
+}

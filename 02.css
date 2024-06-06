@@ -1,0 +1,80 @@
+img {
+  max-width: 500px; /* Maksimal bredde for billedet */
+  height: auto;
+  padding: 30px;
+}
+
+.del1 {
+  text-align: center;
+  position: relative; /* Gør det muligt at absolut positionere h1 */
+}
+
+.del1 h1 {
+  font-size: 100px;
+  position: absolute;
+  top: -300%; /* Placerer overskriften 50% ned i containeren */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrerer overskriften */
+  padding: 40px; /* Tilføjer lidt indrykning omkring teksten */
+}
+
+h1 {
+  font-size: 100px;
+}
+
+.del1 h2 {
+  font-size: 30px;
+  font-style: normal;
+}
+
+.del2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  line-height: 1.8;
+  line-break: auto;
+}
+
+.knap-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+  img {
+    max-width: 100%; /* Juster billedets bredde for mobilvisning */
+    padding: 10px; /* Mindre padding for mobilvisning */
+  }
+
+  .del1 h1 {
+    font-size: 50px; /* Mindre skriftstørrelse for mobilvisning */
+    position: static; /* Fjern absolut positionering */
+    top: 0;
+    left: 0;
+    transform: none; /* Fjern transformering */
+    padding: 20px; /* Mindre padding for mobilvisning */
+    margin-bottom: 20px; /* Tilføj margin for afstand */
+  }
+
+  .del1 h2 {
+    font-size: 24px; /* Mindre skriftstørrelse for mobilvisning */
+  }
+
+  .del2 {
+    display: block; /* Skift til blokvisning for mobilvisning */
+    padding: 10px; /* Mindre padding for mobilvisning */
+  }
+
+  .knap-container {
+    display: block; /* Skift til blokvisning for knap-container */
+    text-align: center; /* Centrer knapperne */
+    padding: 10px; /* Mindre padding for mobilvisning */
+  }
+
+  .knap-container .knap {
+    display: inline-block;
+    width: 80%; /* Gør knapperne bredere på mobile */
+    margin: 10px 0; /* Margin mellem knapperne */
+  }
+}

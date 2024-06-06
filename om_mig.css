@@ -1,0 +1,111 @@
+@media (min-width: 768px) {
+  .del1 {
+    text-align: center;
+    position: relative; /* Gør det muligt at absolut positionere h1 */
+  }
+
+  .del1 h1 {
+    font-size: 100px;
+    position: absolute;
+    top: -15%; /* Placerer overskriften 50% ned i containeren */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrerer overskriften */
+    z-index: 1; /* Sørger for, at overskriften er foran billedet */
+    padding: 10px; /* Tilføjer lidt indrykning omkring teksten */
+  }
+
+  .del1 img {
+    width: 50%; /* Juster billedets bredde */
+    max-width: 300px; /* Maksimal bredde for billedet */
+    height: auto; /* Bevarer billedets aspektforhold */
+    z-index: 0; /* Sørger for, at billedet er bag overskriften */
+  }
+
+  .del2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner med samme bredde */
+    grid-gap: 20px; /* Afstand mellem kolonnerne */
+  }
+
+  .del2 {
+    column-count: 2; /* Antallet af kolonner */
+    column-gap: 20px; /* Afstand mellem kolonnerne */
+    padding: 20px; /* Tilføjer lidt padding omkring teksten */
+    margin: 20px; /* Tilføjer margin for at give lidt plads omkring hele elementet */
+  }
+
+  .tekst {
+    padding: 20px; /* Tilføj lidt polstring omkring teksten */
+    line-height: 1.8;
+    margin: 20px;
+    line-break: auto;
+  }
+
+  .billede img {
+    width: 50%; /* Juster billedets bredde */
+    max-width: 300px; /* Maksimal bredde for billedet */
+    height: auto;
+    padding-left: 90px;
+  }
+
+  .overskrift2 {
+    font-size: 50px;
+    display: flex;
+    justify-content: left;
+    padding-left: 100px;
+  }
+
+  .tekst2 {
+    grid-column: span 2;
+    line-height: 1.8;
+    padding-bottom: 20px;
+    margin: 30px;
+    line-break: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .del1 {
+    text-align: center;
+    position: relative; /* Gør det muligt at absolut positionere h1 */
+  }
+
+  .del1 h1 {
+    font-size: 50px;
+    position: static; /* Fjern absolut positionering */
+    transform: none;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .del1 img {
+    width: 80%; /* Juster billedets bredde for mobilvisning */
+    max-width: none; /* Fjern maksimal bredde */
+    height: auto; /* Bevar billedets aspektforhold */
+    z-index: 0; /* Sørger for, at billedet er bag overskriften */
+  }
+
+  .del2 {
+    display: block; /* Skift til blokvisning */
+    padding: 10px;
+  }
+
+  .tekst-container {
+    margin-bottom: 30px; /* Tilføj margin mellem sektionerne */
+  }
+
+  .tekst-container h2 {
+    font-size: 24px; /* Mindre skriftstørrelse for mobilvisning */
+    margin-bottom: 10px;
+  }
+
+  .knap {
+    padding: 8px 16px; /* Mindre polstring for mobilvisning */
+    margin-bottom: 15px; /* Mindre margin for mobilvisning */
+  }
+
+  .tekst-container p {
+    padding: 0 10px; /* Tilføj padding for mobilvisning */
+    text-align: left; /* Venstrejuster tekst for bedre læsbarhed */
+  }
+}

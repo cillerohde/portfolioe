@@ -1,0 +1,131 @@
+.svg-image {
+  width: 100px; /* Juster bredden efter behov */
+  height: auto; /* Bevar aspektforholdet */
+}
+
+.del1 {
+  text-align: center;
+  position: relative; /* Gør det muligt at absolut positionere h1 */
+}
+
+h1 {
+  font-size: 100px;
+}
+
+.del1 h1 {
+  font-size: 100px;
+  position: absolute;
+  top: -300%; /* Placerer overskriften 50% ned i containeren */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrerer overskriften */
+  padding: 40px; /* Tilføjer lidt indrykning omkring teksten */
+}
+
+.del1 h2 {
+  font-size: 30px;
+  font-style: normal;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+}
+
+.text-container {
+  padding-left: 30%;
+  line-height: 1.8;
+}
+
+.grid-container2 {
+  width: 80%;
+  padding: 20%;
+  line-height: 1.8;
+}
+
+.circle-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  align-items: center;
+  padding-left: 50%;
+  padding-top: 40%;
+}
+
+.svg-image {
+  position: absolute;
+  width: 200px; /* Juster størrelsen efter behov */
+  height: 200px;
+  animation: rotate 5s linear infinite;
+}
+
+.svg-image:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0s;
+}
+
+.svg-image:nth-child(2) {
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  animation-delay: 1.67s;
+}
+
+.svg-image:nth-child(3) {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 3.34s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Mobilvenlig visning */
+@media (max-width: 767px) {
+  /* Ændringer for mobilvisning */
+
+  .del1 {
+    padding: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .del1 h1 {
+    font-size: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .del1 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .del2 {
+    padding: 20px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .del2 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .grid-container,
+  .grid-container2 {
+    width: 100%;
+    padding: 0;
+    display: block;
+  }
+}
